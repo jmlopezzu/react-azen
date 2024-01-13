@@ -25,7 +25,7 @@ const App: React.FC = () => {
 
   // delete task
   const deleteTask = (id: number) => {
-
+  // logic
   }
 
   return (
