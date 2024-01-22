@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.RightBar{
+  font-weight: bold;
+  background-color: darkorchid;
+  width: 200px;
+  height: 50%;
+  padding: 25px;
+  margin-right: 20px;
+}
+
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px; /* Add padding to the main content area */
+}

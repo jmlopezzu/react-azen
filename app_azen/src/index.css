@@ -111,6 +111,27 @@
   color: white; /* Set color to white */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Sidebar.css */
 .sidebar {
   width: 250px; /* Set the width of the sidebar */
@@ -139,22 +160,74 @@
   color: white; /* Change text color on hover */
 }
 
-/* App.css */
-.app-container {
+
+
+
+/* ... Other styles above ... */
+
+/* Dropdown styles */
+.nav-items > li:hover .dropdown-content {
   display: flex;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
   flex-direction: column;
-  min-height: 100vh;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
 }
 
-.main-container {
-  display: flex;
-  flex: 1;
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition effect */
 }
 
-.main-content {
-  flex: 1;
-  padding: 20px; /* Add padding to the main content area */
+.dropdown-content a:hover {
+  background-color: lightgreen; /* Change background color on hover */
+  color: white; /* Change text color on hover */
 }
+
+/* ... Other styles below ... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Additional styles for footer */
 .footer {
@@ -202,38 +275,3 @@
   font-size: 14px; /* Card description font size */
   color: #555; /* Text color */
 }
-
-/* ... Other styles above ... */
-
-/* Dropdown styles */
-.nav-items > li:hover .dropdown-content {
-  display: flex;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  flex-direction: column;
-  background-color: #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition effect */
-}
-
-.dropdown-content a:hover {
-  background-color: lightgreen; /* Change background color on hover */
-  color: white; /* Change text color on hover */
-}
-
-/* ... Other styles below ... */
-

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import RightBar from './components/RightBar';
 import MainContent from './components/MainContent';
 import Sidebar from './components/Sidebar';
 
@@ -15,7 +16,7 @@ function App() {
         <main className="main-content">
           <MainContent />
         </main>
-        <Footer />
+        <RightBar />
       </div>
       <Footer />
     </div>
