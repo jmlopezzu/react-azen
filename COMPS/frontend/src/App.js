@@ -6,9 +6,9 @@ import { Main } from './components/Main';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { RightBar } from './components/RightBar';
+import MyButton from './components/Count';
 
-
-function App() {
+function App() {    
   return (
     <div className="MainContent">
       <Header />
@@ -16,6 +16,8 @@ function App() {
         <SideBar />
         <main className="main">
         <Main />
+        <MyButton/>
+        <MyButton/>
         </main>
         <RightBar />
       </div>

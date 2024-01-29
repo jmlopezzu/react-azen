@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Api 0</title>
+  <!-- Import library -- Plotly -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.28.0/plotly.min.js"></script>
+</head>
+<body>
+  <h1>Revisar Consola</h1>
+
+  <script>
+    // Usar mi primera API
+    // FUNCION Fetch : Sirve para hacer peticiones HTTP - GET (Luego ver: AJAX - AXIOS)
+    // api : https://catfact.ninja/fact
+
+    const request = "https://catfact.ninja/fact"
+
+    fetch(request)
+      .then(response => {
+        // if (!res.ok) {
+        //   throw new Error('HTTP error! Status: ${response.status} ');
+        // }
+        return response.json();
+      })
+      .then(data => {
+        console.log("Cat length:" ,data.length);
+        console.log("Cat fact:" ,data.fact);
+
+        // Crear la data de la grafica titulo, crear y, la funcion la llamaremos plot
+
+        const y = data.fact.length;
+
+        const titulo = {
+          title: 'Mi primer grafica con Plotly'
+        };
+
+        const plot = [{
+          x: ['RANDOM PRHASE'],
+          y: [y],
+          type: 'box'
+        }];
+
+        Plotly.newPlot('chart',plot, titulo);
+      });
+      // .catch(error => {
+      //   console.error('Error: ', error )
+      // })
+  </script>
+
+
+<div id="chart"></div>
+
+
+</body>
+</html>

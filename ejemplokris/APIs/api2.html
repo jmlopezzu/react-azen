@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <title>API 1</title>
+</head>
+<body>
+  <script>
+    const url = "https://catfact.ninja/fact";
+
+    // Fetch cat fact
+    fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log("Cat Fact:", data.fact);
+
+        // Create a simple Plotly bar chart with the cat fact length
+        const factLength = data.fact.length;
+
+        const dataPlotly = [{
+          x: ["Cat Fact Length"],
+          y: [factLength],
+          type: 'bar',
+        }];
+
+        const layout = {
+          title: 'Cat Fact Length',
+        };
+
+        Plotly.newPlot('chart', dataPlotly, layout);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  </script>
+  <div id="chart"></div> <!-- This is where the plot will be rendered -->
+</body>
+</html>
